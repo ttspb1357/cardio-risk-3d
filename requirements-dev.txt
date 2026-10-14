@@ -1,0 +1,5 @@
+# Everything in requirements.txt, plus what retraining (ml/evaluate.py, ml/train.py) and the tests need.
+-r requirements.txt
+catboost==1.2.10
+pytest==9.1.1
+httpx==0.28.1

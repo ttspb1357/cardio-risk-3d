@@ -1,0 +1,17 @@
+# Files not uploaded to Vercel. The deployed app needs: app.py, backend/, ml/ (code, feature_meta.json, artifacts/),
+# data/ (read for the feature list), frontend/dist/ (the built website) and requirements.txt.
+.venv/
+**/__pycache__/
+*.pyc
+.pytest_cache/
+catboost_info/
+frontend/node_modules/
+frontend/src/
+frontend/public/
+tools/
+tests/
+docs/
+ml/artifacts/nested_cv_preds.joblib
+start.bat
+*.md
+.env*

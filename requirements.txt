@@ -1,0 +1,15 @@
+# Runtime dependencies: what the app needs to serve predictions (installed by start.bat and by Vercel).
+# Training and tests need requirements-dev.txt as well.
+# Pinned for reproducibility. xgboost stays on 2.1.x: shap 0.49 cannot read xgboost 3.x models.
+pandas==2.3.3
+numpy==2.2.6
+scikit-learn==1.7.2
+# On Linux (Vercel) the CPU-only build: same "xgboost" module, but without ~330 MB of CUDA libraries, which keeps the
+# serverless bundle under Vercel's 500 MB limit.
+xgboost==2.1.4; sys_platform != "linux"
+xgboost-cpu==2.1.4; sys_platform == "linux"
+shap==0.49.1
+joblib==1.6.0
+openpyxl==3.1.5
+fastapi==0.142.0
+uvicorn==0.54.0
